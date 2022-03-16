@@ -68,6 +68,8 @@ canvas {
 
 img {
     max-width: 100%;
+    object-fit: cover;
+    animation: arriba 1s ease-in;
 }
 
 .container{
@@ -76,7 +78,25 @@ img {
     max-width: 85%;
 }
 
-.container-heder {
+section {
+    padding-top: 10rem;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Lato";
+    font-weight: bold;
+    line-height: 5rem;
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: #000022;
+    animation: moverDerecha 1s ease-in;
+}
+
+.container-header {
     height: 100vh;
     background: #7b4397;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
@@ -96,23 +116,24 @@ img {
 }
 
 
-
 .item h1 {
     font-family: "Lato";
-    font-weight: lighter;
-    line-height: 4rem;
-    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: 5rem;
+    font-size: 4rem;
     text-transform: capitalize;
     color: #fff;
-    text-align: center;
+    animation: moverDerecha 1s ease-in;
 }
 
+
 .item p {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
     font-family: "Lato";
     line-height: 2rem;
     margin: 2rem 0;
+    animation: moverIzquierda 1s ease-in;
 }
 
 .item button {
@@ -151,6 +172,114 @@ nav.container {
     display: inherit;  /* esto nos hereda el display flex */
     align-items: center;
 }
+
+.container-Left h2 {
+    font-family: "Roboto";
+    font-size: 2rem;
+    color: #fff;
+}
+
+.container-Left h2 {
+    animation: none;
+}
+
+.links {
+    margin-left: 4rem;
+}
+
+.links a {
+    margin-right: 3.5rem;
+    color: #fff;
+    font-family: "Lato";
+    font-size: 16px;
+    text-transform: initial;
+    text-decoration: none
+}
+
+/* ---- ABOUT ---- */
+
+.about-img {
+    width: 85%;
+    animation: moverIzquierda 1s ease-in;
+}
+
+.about {
+    background-color: #fff;
+    animation: arriba 1s ease-in;
+}
+
+.about p {
+    font-size: 18px;
+    color: #000;
+    font-family: "lato";
+    line-height: 2rem;
+    margin: 2rem 0;
+    text-align: justify;
+}
+
+.about h1 {
+    margin-top: 0;
+    font-family: "Lato";
+    font-weight: bold;
+    line-height: 5rem;
+    font-size: 9rem;
+    text-transform: capitalize;
+    color: #000;
+}
+
+/* ---- PORTAFOLIOS ---- */
+
+
+
+
+
+
+
+
+/* ---- ANIMACIONES ---- */
+@keyframes moverIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes arriba{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media screen and (max-width:1000px){
+    img{
+        height: 400px;
+    }
+
+}
+
 
 
 
