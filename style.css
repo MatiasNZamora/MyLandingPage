@@ -1,3 +1,4 @@
+
 /* Import fonts */
 @font-face {
     font-family: "Lato";
@@ -8,6 +9,15 @@
     src: url(./assets/fonts/Roboto/Roboto-Bold.ttf);
 }
 
+@font-face {
+    font-family: "Lato400";
+    src: url(./assets/fonts/Lato/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Lato900";
+    src: url(./assets/fonts/Lato/Lato-Bold.ttf);
+}
 
 /* backgroud configuration librery */
 /* ---- reset ---- */
@@ -64,7 +74,7 @@ canvas {
 
 /* ---- LANDING STYLE ---- */
 
-/* ---- UTILITI ---- */
+/* ---- UTILITY ---- */
 
 img {
     max-width: 100%;
@@ -83,6 +93,29 @@ section {
     height: 80vh;
     justify-content: center;
     text-align: center center;
+}
+
+.logo {
+    height: 80px;
+    margin-top: 30px;
+}
+
+button {
+    width: 10rem;
+    height: 3rem;
+    background: transparent;
+    font-family: "Lato400";
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(253, 255, 251, 0.5);
+    border-color: rgb(255, 255, 255);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.600);
 }
 
 h2 {
@@ -114,9 +147,8 @@ h2 {
     z-index: 1;
 }
 
-
 .item h1 {
-    font-family: "Lato";
+    font-family: "Lato900";
     font-weight: bold;
     line-height: 5rem;
     font-size: 4rem;
@@ -132,24 +164,17 @@ h2 {
     font-family: "Lato";
     line-height: 2rem;
     margin: 2rem 0;
-    animation: moverIzquierda 1s ease-in;
+    animation: moverIzquierda 2s ease-in;
+}
+
+.item h1, p {
+    margin-top: 10rem;
 }
 
 .item img {
-    animation: arriba 1s ease-in;
+    animation: arriba 2s ease-in;
 }
 
-.item button {
-    width: 10rem;
-    height: 3rem;
-    background: transparent;
-    font-family: "Lato";
-    text-transform: uppercase;
-    color: #fff;
-    border-radius: 50px;
-    border: 2px solid #fff;
-    cursor: pointer;
-}
 
 .item:nth-of-type(2) {
     display: flex;
@@ -202,13 +227,13 @@ nav.container {
 /* ---- ABOUT ---- */
 
 .about-img {
-    width: 85%;
-    animation: moverIzquierda 1s ease-in;
+    margin-top: -9rem;
+    width: 100%;
+    animation: moverIzquierda 2s ease-in;
 }
 
 .about {
     background-color: #fff;
-    animation: arriba 1s ease-in;
 }
 
 .about p {
@@ -218,16 +243,18 @@ nav.container {
     line-height: 2rem;
     margin: 2rem 0;
     text-align: justify;
+    animation: moverDerecha 2s ease-in;
 }
 
 .about h1 {
     margin-top: 0;
-    font-family: "Lato";
+    font-family: "Lato900";
     font-weight: bold;
     line-height: 5rem;
     font-size: 9rem;
     text-transform: capitalize;
     color: #000;
+    animation: moverDerecha 2s ease-in;
 }
 
 /* ---- PORTAFOLIOS ---- */
@@ -238,31 +265,84 @@ nav.container {
     background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.contenido {
+    animation: moverDerecha 4s ease-in;
+}
+
 .porfolio h1 {
-    margin-top: 0;
-    font-family: "Lato";
+    margin-top: -1rem;
+    font-family: "Lato900";
     font-weight: lighter;
     line-height: 5rem;
-    font-size: 9rem;
+    font-size: 7.8rem;
     text-transform: capitalize;
     color: #fff;
 }
 
 .porfolio img {
-    animation: none;
+    animation: moverIzquierda 2s ease-in;
+    height: 55rem;
+    margin-top: -9rem;
 }
 
-/* ---- CONTACT ---- */
+p {
+    font-size: 18px;
+    color: #fff;
+    font-family: "Lato400";
+    line-height: 2rem;
+    margin: 2rem 0;
+    text-align: justify;
+}
 
+.icons-skills {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+    
+}
 
+.icons-skills li p {
+    text-align: center ;
+}
 
+.icons-skills img {
+    height: 50px;
+    margin: 0;
+    
+}
 
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    list-style: none;
+    margin-top: 70px;
+}
 
+button {
+    border-radius: 0;
+}
 
+/* ---- FOOTER ---- */
 
+footer {
+    padding: 1rem;
+    height: 5rem;
+    background: #7b4397;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
-
-
+footer .icons-skills {
+    background-color: rgba(253, 255, 251, 0.5);
+    padding: 1rem 0 0.7rem ;
+    border-radius: 20px 20px 0 0;
+    margin: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.600);
+    animation: arriba 2s ease-in;
+}
 
 /* ---- ANIMACIONES ---- */
 @keyframes moverIzquierda{
